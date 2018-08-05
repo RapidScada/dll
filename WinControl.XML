@@ -4,6 +4,25 @@
         <name>WinControl</name>
     </assembly>
     <members>
+        <member name="T:WinControl.ChildFormClosedEventArgs">
+            <summary>
+            Provides data for the ChildFormClosed event.
+            <para>Предоставляет данные для события ChildFormClosed.</para>
+            </summary>
+            <remarks>
+            Author: Mikhail Shiryaev, 2018
+            </remarks>
+        </member>
+        <member name="M:WinControl.ChildFormClosedEventArgs.#ctor(System.Windows.Forms.CloseReason,System.Windows.Forms.Form)">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="P:WinControl.ChildFormClosedEventArgs.ChildForm">
+            <summary>
+            Gets the child form that is closed.
+            </summary>
+        </member>
         <member name="T:WinControl.FrmSaveRequest">
             <summary>
             The save request form.
@@ -14,6 +33,12 @@
             <summary>
             Initializes a new instance of the FrmSaveRequest class.
             <para>Конструктор.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.FrmSaveRequest.SavedItems">
+            <summary>
+            Gets or sets the saved items list.
+            <para>Получить или установить список сохраняемых элементов.</para>
             </summary>
         </member>
         <member name="F:WinControl.FrmSaveRequest.components">
@@ -33,39 +58,145 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:WinControl.FrmSaveRequest.SavedItems">
-            <summary>
-            Gets or sets the saved items list.
-            <para>Получить или установить список сохраняемых элементов.</para>
-            </summary>
-        </member>
         <member name="T:WinControl.WinControl">
             <summary>
             Represents a control that contains multiple forms that share the same space on the screen.
             <para>Элемент управления, содержащий набор форм, которые используют общее пространство на экране.</para>
             </summary>
+            <remarks>
+            Author: Mikhail Shiryaev, 2010, 2018
+            </remarks>
         </member>
-        <member name="F:WinControl.WinControl.components">
-            <summary> 
-            Required designer variable.
+        <member name="T:WinControl.WinControl.TabPage">
+            <summary>
+            Page with a tab.
+            <para>Страница с закладкой.</para>
             </summary>
         </member>
-        <member name="M:WinControl.WinControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
+        <member name="P:WinControl.WinControl.TabPage.TabPanel">
+            <summary>
+            Gets or sets the panel represents the tab page.
+            <para>Получить или установить панель, представляющую закладку.</para>
             </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
-        <member name="M:WinControl.WinControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
+        <member name="P:WinControl.WinControl.TabPage.ChildForm">
+            <summary>
+            Gets or sets the child form with the page content.
+            <para>Получить или установить дочернюю форму с содержимым страницы.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.TabPage.Image">
+            <summary>
+            Gets or sets the page's image.
+            <para>Получить или установить пиктограмму страницы.</para>
+            </summary>
+        </member>
+        <member name="T:WinControl.WinControl.ColorScheme">
+            <summary>
+            Control's color scheme.
+            <para>Цветовая схема элемента управления.</para>
+            </summary>
+        </member>
+        <member name="F:WinControl.WinControl.Version">
+            <summary>
+            Version of the control.
+            <para>Версия элемента управления.</para>
             </summary>
         </member>
         <member name="M:WinControl.WinControl.#ctor">
             <summary>
             Initializes a new instance of the WinControl class.
             <para>Конструктор.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.ActiveForm">
+            <summary>
+            Gets the active form.
+            <para>Получить активную форму.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.Forms">
+            <summary>
+            Gets the list of forms contained within the control.
+            <para>Получить список форм, которые содержит элемент управления.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.FormCount">
+            <summary>
+            Gets the number of forms in the tab strip.
+            <para>Получить количество форм (закладок).</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.AllowToOrderTabs">
+            <summary>
+            Gets or sets a value indicating whether manual tab repositioning is enabled.
+            <para>Получить или установить значение, определяющее возможность перестановки закладок.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.ButtonsVisible">
+            <summary>
+            Gets or sets a value indicating whether the buttons are displayed.
+            <para>Получить или установить значение, определяющее видимость кнопок.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.ControlColorScheme">
+            <summary>
+            Gets or sets the color scheme of the control.
+            <para>Получить или установить цветовую схему элемента управления.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.Image">
+            <summary>
+            Gets or sets the image displayed by the control when pages don't exist.
+            <para>Получить или установить рисунок, отображаемый элементом управления, когда страницы отсутствуют.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.MessageText">
+            <summary>
+            Gets or sets the message text displayed by the control when pages don't exists.
+            <para>Получить или установить текст сообщения, отображаемый элементом управления, когда страницы отсутствуют.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.MessageFont">
+            <summary>
+            Gets or sets the font of the message displayed by the control.
+            <para>Получить или установить шрифт текста сообщения.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.MessageColor">
+            <summary>
+            Gets or sets the color of the message.
+            <para>Получить или установить цвет текста сообщения.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.SaveReqCaption">
+            <summary>
+            Gets or sets the text to display in the title bar of the save request form.
+            <para>Получить или установить текст заголовка формы запроса на сохранение данных.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.SaveReqQuestion">
+            <summary>
+            Gets or sets the question text to display in the save request form.
+            <para>Получить или установить текст вопроса на сохранение данных.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.SaveReqYes">
+            <summary>
+            Gets or sets the 'Yes' button text to display in the save request form.
+            <para>Получить или установить текст кнопки 'Да' на форме запроса на сохранение данных.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.SaveReqNo">
+            <summary>
+            Gets or sets the 'No' button text to display in the save request form.
+            <para>Получить или установить текст кнопки 'Нет' на форме запроса на сохранение данных.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.WinControl.SaveReqCancel">
+            <summary>
+            Gets or sets the 'Cancel' button text to display in the save request form.
+            <para>Получить или установить текст кнопки 'Отмена' на форме запроса на сохранение данных.</para>
             </summary>
         </member>
         <member name="M:WinControl.WinControl.TuneTabPanels">
@@ -122,13 +253,13 @@
             <para>Закрыть все страницы.</para>
             </summary>
         </member>
-        <member name="M:WinControl.WinControl.ContentFormModifiedChanged(System.Object,System.EventArgs)">
+        <member name="M:WinControl.WinControl.ChildFormTagModifiedChanged(System.Object,System.EventArgs)">
             <summary>
-            Processes event that raised when a content form's the Modified property value changes.
-            <para>Обработать событие при изменении свойства Modified формы с содержимым страницы.</para>
+            Processes event that raised when a child form's the Modified property value changes.
+            <para>Обработать событие при изменении свойства Modified дочерней формы.</para>
             </summary>
         </member>
-        <member name="M:WinControl.WinControl.ShowSaveRequest(System.Collections.Generic.List{WinControl.IWinControllable},System.Boolean@)">
+        <member name="M:WinControl.WinControl.ShowSaveRequest(System.Collections.Generic.List{WinControl.IChildForm},System.Boolean@)">
             <summary>
             Shows the save request form.
             <para>Показать форму запроса на сохранение данных.</para>
@@ -140,7 +271,13 @@
             <para>Вызвать событие ActiveFormChanged.</para>
             </summary>
         </member>
-        <member name="M:WinControl.WinControl.AddForm(System.Windows.Forms.Form,System.String,System.Drawing.Image)">
+        <member name="M:WinControl.WinControl.OnChildFormClosed(WinControl.ChildFormClosedEventArgs)">
+            <summary>
+            Raises the ChildFormClosed event.
+            <para>Вызвать событие ChildFormClosed.</para>
+            </summary>
+        </member>
+        <member name="M:WinControl.WinControl.AddForm(System.Windows.Forms.Form,System.String,System.Drawing.Image,System.Windows.Forms.TreeNode)">
             <summary>
             Adds a form to the control.
             <para>Добавить форму.</para>
@@ -182,180 +319,96 @@
             <para>Активировать предыдущую форму.</para>
             </summary>
         </member>
-        <member name="P:WinControl.WinControl.ActiveForm">
-            <summary>
-            Gets the active form.
-            <para>Получить активную форму.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.Forms">
-            <summary>
-            Gets the list of forms contained within the control.
-            <para>Получить список форм, которые содержит элемент управления.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.FormCount">
-            <summary>
-            Gets the number of forms in the tab strip.
-            <para>Получить количество форм (закладок).</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.AllowToOrderTabs">
-            <summary>
-            Gets or sets a value indicating whether manual tab repositioning is enabled.
-            <para>Получить или установить значение, определяющее возможность перестановки закладок.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.ButtonsVisible">
-            <summary>
-            Gets or sets a value indicating whether the buttons are displayed.
-            <para>Получить или установить значение, определяющее видимость кнопок.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.ControlColorScheme">
-            <summary>
-            Gets or sets the color scheme of the control.
-            <para>Получить или установить цветовую схему элемента управления.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.Image">
-            <summary>
-            Gets or sets the image displayed by the control when pages doesn't exists.
-            <para>Получить или установить рисунок, отображаемый элементом управления, когда страницы отсутствуют.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.MessageText">
-            <summary>
-            Gets or sets the message text displayed by the control when pages doesn't exists.
-            <para>Получить или установить текст сообщения, отображаемый элементом управления, когда страницы отсутствуют.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.MessageFont">
-            <summary>
-            Gets or sets the font of the message displayed by the control.
-            <para>Получить или установить шрифт текста сообщения.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.MessageColor">
-            <summary>
-            Gets or sets the color of the message.
-            <para>Получить или установить цвет текста сообщения.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.SaveReqCaption">
-            <summary>
-            Gets or sets the text to display in the title bar of the save request form.
-            <para>Получить или установить текст заголовка формы запроса на сохранение данных.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.SaveReqQuestion">
-            <summary>
-            Gets or sets the question text to display in the save request form.
-            <para>Получить или установить текст вопроса на сохранение данных.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.SaveReqYes">
-            <summary>
-            Gets or sets the 'Yes' button text to display in the save request form.
-            <para>Получить или установить текст кнопки 'Да' на форме запроса на сохранение данных.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.SaveReqNo">
-            <summary>
-            Gets or sets the 'No' button text to display in the save request form.
-            <para>Получить или установить текст кнопки 'Нет' на форме запроса на сохранение данных.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.SaveReqCancel">
-            <summary>
-            Gets or sets the 'Cancel' button text to display in the save request form.
-            <para>Получить или установить текст кнопки 'Отмена' на форме запроса на сохранение данных.</para>
-            </summary>
-        </member>
         <member name="E:WinControl.WinControl.ActiveFormChanged">
             <summary>
             Occurs when the active form has changed.
             <para>Происходит, когда изменяется значение свойства ActiveForm.</para>
             </summary>
         </member>
-        <member name="T:WinControl.WinControl.TabPage">
+        <member name="E:WinControl.WinControl.ChildFormClosed">
             <summary>
-            Page with a tab.
-            <para>Страница с закладкой.</para>
+            Occurs when a child form is closed.
+            <para>Происходит, когда закрывается дочерняя форма.</para>
             </summary>
         </member>
-        <member name="P:WinControl.WinControl.TabPage.TabPanel">
-            <summary>
-            Gets or sets the panel represents the tab page.
-            <para>Получить или установить панель, представляющую закладку.</para>
+        <member name="F:WinControl.WinControl.components">
+            <summary> 
+            Required designer variable.
             </summary>
         </member>
-        <member name="P:WinControl.WinControl.TabPage.ContentForm">
-            <summary>
-            Gets or sets the form with the page content.
-            <para>Получить или установить форму с содержимым страницы</para>
+        <member name="M:WinControl.WinControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WinControl.WinControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="P:WinControl.WinControl.TabPage.Image">
+        <member name="T:WinControl.IChildForm">
             <summary>
-            Gets or sets the page's image.
-            <para>Получить или установить пиктограмму страницы.</para>
+            Provides efficient way to control child form by a WinControl control.
+            <para>Обеспечивает эффективное управление дочерней формой с помощью элемента управления WinControl.</para>
             </summary>
+            <remarks>
+            Author: Mikhail Shiryaev, 2010, 2018
+            </remarks>
         </member>
-        <member name="T:WinControl.WinControl.ColorScheme">
-            <summary>
-            Control's color scheme.
-            <para>Цветовая схема элемента управления.</para>
-            </summary>
-        </member>
-        <member name="T:WinControl.IWinControllable">
-            <summary>
-            Предоставляет возможность окну контролироваться элементом управления WinControl
-            </summary>
-        </member>
-        <member name="M:WinControl.IWinControllable.Save">
-            <summary>
-            Сохранить изменения данных контролируемого окна
-            </summary>
-        </member>
-        <member name="P:WinControl.IWinControllable.WinInfo">
+        <member name="P:WinControl.IChildForm.ChildFormTag">
             <summary>
             Получить или установить информацию о контролируемом окне
             </summary>
         </member>
-        <member name="T:WinControl.WinInfo">
+        <member name="M:WinControl.IChildForm.Save">
             <summary>
-            Информация о контролируемом окне
+            Saves the changes of the child form data.
             </summary>
         </member>
-        <member name="M:WinControl.WinInfo.#ctor">
+        <member name="T:WinControl.ChildFormTag">
             <summary>
-            Конструктор
+            Represents an object associated with a child form.
+            <para>Представляет объект, связанный с дочерней формой.</para>
+            </summary>
+            <remarks>
+            Author: Mikhail Shiryaev, 2010, 2018
+            </remarks>
+        </member>
+        <member name="M:WinControl.ChildFormTag.#ctor">
+            <summary>
+            Initializes a new instance of the class
             </summary>
         </member>
-        <member name="P:WinControl.WinInfo.Modified">
+        <member name="P:WinControl.ChildFormTag.Modified">
             <summary>
-            Получить или установить признак изменения данных контролируемого окна
+            Gets or sets a value indicating whether the child form data were modified.
             </summary>
         </member>
-        <member name="P:WinControl.WinInfo.TreeNode">
+        <member name="P:WinControl.ChildFormTag.Title">
             <summary>
-            Получить или установить узел дерева проводника, соответствующий контролируемому окну
+            Gets the title of the child form.
             </summary>
         </member>
-        <member name="P:WinControl.WinInfo.TabPanel">
+        <member name="P:WinControl.ChildFormTag.TreeNode">
             <summary>
-            Получить или установить панель, представляющую закладку контролируемого окна
+            Gets or sets the tree node associated with the child form.
             </summary>
         </member>
-        <member name="P:WinControl.WinInfo.Title">
+        <member name="P:WinControl.ChildFormTag.TabPanel">
             <summary>
-            Получить заголовок контролируемого окна
+            Gets or sets the panel that represents the tab of the child form.
             </summary>
         </member>
-        <member name="E:WinControl.WinInfo.ModifiedChanged">
+        <member name="M:WinControl.ChildFormTag.OnModifiedChanged(System.EventArgs)">
             <summary>
-            Происходит при изменении свойства Modified
+            Raises the ModifiedChanged event.
+            </summary>
+        </member>
+        <member name="E:WinControl.ChildFormTag.ModifiedChanged">
+            <summary>
+            Occurs when the Modified property changed.
             </summary>
         </member>
     </members>
