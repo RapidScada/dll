@@ -23,6 +23,15 @@
             Gets the child form that is closed.
             </summary>
         </member>
+        <member name="T:WinControl.ColorScheme">
+            <summary>
+            Control's color scheme.
+            <para>Цветовая схема элемента управления.</para>
+            <remarks>
+            Author: Mikhail Shiryaev, 2010
+            </remarks>
+            </summary>
+        </member>
         <member name="T:WinControl.FormMessageEventArgs">
             <summary>
             Provides data for a form message event.
@@ -92,6 +101,33 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="T:WinControl.TabPage">
+            <summary>
+            Page with a tab.
+            <para>Страница с закладкой.</para>
+            </summary>
+            <remarks>
+            Author: Mikhail Shiryaev, 2018
+            </remarks>
+        </member>
+        <member name="P:WinControl.TabPage.TabPanel">
+            <summary>
+            Gets or sets the panel represents the tab page.
+            <para>Получить или установить панель, представляющую закладку.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.TabPage.ChildForm">
+            <summary>
+            Gets or sets the child form with the page content.
+            <para>Получить или установить дочернюю форму с содержимым страницы.</para>
+            </summary>
+        </member>
+        <member name="P:WinControl.TabPage.Image">
+            <summary>
+            Gets or sets the page's image.
+            <para>Получить или установить пиктограмму страницы.</para>
+            </summary>
+        </member>
         <member name="T:WinControl.WinControl">
             <summary>
             Represents a control that contains multiple forms that share the same space on the screen.
@@ -100,36 +136,6 @@
             <remarks>
             Author: Mikhail Shiryaev, 2010, 2018
             </remarks>
-        </member>
-        <member name="T:WinControl.WinControl.TabPage">
-            <summary>
-            Page with a tab.
-            <para>Страница с закладкой.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.TabPage.TabPanel">
-            <summary>
-            Gets or sets the panel represents the tab page.
-            <para>Получить или установить панель, представляющую закладку.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.TabPage.ChildForm">
-            <summary>
-            Gets or sets the child form with the page content.
-            <para>Получить или установить дочернюю форму с содержимым страницы.</para>
-            </summary>
-        </member>
-        <member name="P:WinControl.WinControl.TabPage.Image">
-            <summary>
-            Gets or sets the page's image.
-            <para>Получить или установить пиктограмму страницы.</para>
-            </summary>
-        </member>
-        <member name="T:WinControl.WinControl.ColorScheme">
-            <summary>
-            Control's color scheme.
-            <para>Цветовая схема элемента управления.</para>
-            </summary>
         </member>
         <member name="F:WinControl.WinControl.Version">
             <summary>
@@ -269,13 +275,13 @@
             <para>Найти страницу, соответствующую заданной форме, и извлечь индекс страницы.</para>
             </summary>
         </member>
-        <member name="M:WinControl.WinControl.SelectTabPage(WinControl.WinControl.TabPage)">
+        <member name="M:WinControl.WinControl.SelectTabPage(WinControl.TabPage)">
             <summary>
             Selects the tab page.
             <para>Выбрать страницу.</para>
             </summary>
         </member>
-        <member name="M:WinControl.WinControl.CloseTabPage(WinControl.WinControl.TabPage,System.Int32)">
+        <member name="M:WinControl.WinControl.CloseTabPage(WinControl.TabPage,System.Int32)">
             <summary>
             Closes the tab page. The specified non negative index speed ups the method.
             <para>Закрыть страницу. Заданный неотрицательный индекс ускоряет метод.</para>
@@ -351,6 +357,12 @@
             <summary>
             Activates the previous form.
             <para>Активировать предыдущую форму.</para>
+            </summary>
+        </member>
+        <member name="M:WinControl.WinControl.UpdateHint(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Updates a hint of a tab page that corresponds to the specified form.
+            <para>Обновляет подсказку закладки, соответствующей указанной форме.</para>
             </summary>
         </member>
         <member name="E:WinControl.WinControl.ActiveFormChanged">
