@@ -325,8 +325,14 @@
         </member>
         <member name="M:WinControl.WinControl.CloseForm(System.Windows.Forms.Form,System.Boolean@)">
             <summary>
-            Closes a form.
+            Closes the form.
             <para>Закрыть форму.</para>
+            </summary>
+        </member>
+        <member name="M:WinControl.WinControl.CloseForm(System.Windows.Forms.Form)">
+            <summary>
+            Closes the form without the possibility of cancellation.
+            <para>Закрыть форму без возможности отмены.</para>
             </summary>
         </member>
         <member name="M:WinControl.WinControl.CloseAllForms(System.Boolean@)">
