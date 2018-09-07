@@ -293,6 +293,12 @@
             <para>Закрыть все страницы.</para>
             </summary>
         </member>
+        <member name="M:WinControl.WinControl.GetFormTitle(System.Windows.Forms.Form)">
+            <summary>
+            Get the form title, taking into account the modified flag.
+            <para>Получить заголовок формы, учитывая признак изменения.</para>
+            </summary>
+        </member>
         <member name="M:WinControl.WinControl.ShowSaveRequest(System.Collections.Generic.List{WinControl.IChildForm},System.Boolean@)">
             <summary>
             Shows the save request form.
@@ -442,11 +448,6 @@
         <member name="P:WinControl.ChildFormTag.Modified">
             <summary>
             Gets or sets a value indicating whether the child form data were modified.
-            </summary>
-        </member>
-        <member name="P:WinControl.ChildFormTag.Title">
-            <summary>
-            Gets the title of the child form.
             </summary>
         </member>
         <member name="P:WinControl.ChildFormTag.TreeNode">
