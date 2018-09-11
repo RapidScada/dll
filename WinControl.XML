@@ -4,6 +4,25 @@
         <name>WinControl</name>
     </assembly>
     <members>
+        <member name="T:WinControl.ChildFormEventArgs">
+            <summary>
+            Provides data for the event related to a child form.
+            <para>Предоставляет данные для события, относящегося к дочерней форме.</para>
+            </summary>
+            <remarks>
+            Author: Mikhail Shiryaev, 2018
+            </remarks>
+        </member>
+        <member name="M:WinControl.ChildFormEventArgs.#ctor(System.Windows.Forms.Form)">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+        </member>
+        <member name="P:WinControl.ChildFormEventArgs.ChildForm">
+            <summary>
+            Gets the corresponding child form.
+            </summary>
+        </member>
         <member name="T:WinControl.ChildFormClosedEventArgs">
             <summary>
             Provides data for the ChildFormClosed event.
@@ -323,6 +342,12 @@
             <para>Вызвать событие ChildFormMessage.</para>
             </summary>
         </member>
+        <member name="M:WinControl.WinControl.OnChildFormModifiedChanged(WinControl.ChildFormEventArgs)">
+            <summary>
+            Raises the ChildFormModifiedChanged event.
+            <para>Вызвать событие ChildFormModifiedChanged.</para>
+            </summary>
+        </member>
         <member name="M:WinControl.WinControl.AddForm(System.Windows.Forms.Form,System.String,System.Drawing.Image,System.Windows.Forms.TreeNode)">
             <summary>
             Adds a form to the control.
@@ -339,6 +364,12 @@
             <summary>
             Closes the form without the possibility of cancellation.
             <para>Закрыть форму без возможности отмены.</para>
+            </summary>
+        </member>
+        <member name="M:WinControl.WinControl.CloseActiveForm(System.Boolean@)">
+            <summary>
+            Closes the active form.
+            <para>Закрыть активную форму.</para>
             </summary>
         </member>
         <member name="M:WinControl.WinControl.CloseAllForms(System.Boolean@)">
@@ -393,6 +424,12 @@
             <summary>
             Occurs when a child form sends a message.
             <para>Происходит, когда дочерняя форма отправляет сообщение.</para>
+            </summary>
+        </member>
+        <member name="E:WinControl.WinControl.ChildFormModifiedChanged">
+            <summary>
+            Occurs when the Modified property of a child form has changed.
+            <para>Происходит, когда изменяется свойство Modified дочерней формы.</para>
             </summary>
         </member>
         <member name="F:WinControl.WinControl.components">
