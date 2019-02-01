@@ -153,7 +153,7 @@
             <para>Элемент управления, содержащий набор форм, которые используют общее пространство на экране.</para>
             </summary>
             <remarks>
-            Author: Mikhail Shiryaev, 2010, 2018
+            Author: Mikhail Shiryaev, 2010, 2018-2019
             </remarks>
         </member>
         <member name="F:WinControl.WinControl.Version">
