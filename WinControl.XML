@@ -57,7 +57,7 @@
             <para>Предоставляет данные для события сообщения формы.</para>
             </summary>
             <remarks>
-            Author: Mikhail Shiryaev, 2018
+            Author: Mikhail Shiryaev, 2018-2019
             </remarks>
         </member>
         <member name="M:WinControl.FormMessageEventArgs.#ctor(System.Windows.Forms.Form,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
@@ -83,6 +83,11 @@
         <member name="P:WinControl.FormMessageEventArgs.Cancel">
             <summary>
             Gets or sets a value indicating whether the event should be canceled.
+            </summary>
+        </member>
+        <member name="M:WinControl.FormMessageEventArgs.GetArgument(System.String)">
+            <summary>
+            Gets an argument by key if present, otherwise returns null.
             </summary>
         </member>
         <member name="T:WinControl.FrmSaveRequest">
